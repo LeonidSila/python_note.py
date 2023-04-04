@@ -1,16 +1,16 @@
-import note
+import Note
 
 
 def create_note(number):
     title = check_len_text_input(
-        input('Введите Название заметки: '), number)
+        input('Введите название: '), number)
     body = check_len_text_input(
-        input('Введите Описание заметки: '), number)
-    return note.Note(title=title, body=body)
+        input('Введите описание заметки: '), number)
+    return Note.Note(title=title, body=body)
 
 
 def menu():
-    print("\nЭто программа 'Заметки'. Имеются следующие функции:\n\n1 - вывод всех заметок из файла\n2 - добавление заметки\n3 - удаление заметки\n4 - редактирование заметки\n5 - выборка заметок по дате\n6 - показать заметку по id\n7 - выход\n\nВведите номер функции: ")
+    print("\n1 - Вывод всех заметок из файла\n2 - Добавление заметки\n3 - Удаление заметки\n4 - Редактирование заметки\n5 - Выборка заметок по дате\n6 - Показать заметку по id\n7 - Выход\n\nВведите номер: ")
 
 
 def check_len_text_input(text, n):
@@ -22,4 +22,4 @@ def check_len_text_input(text, n):
 
 
 def goodbuy():
-    print("Приходите к нам еще =). До новых встреч!")
+    print("Выход")
