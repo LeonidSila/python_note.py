@@ -1,4 +1,5 @@
 import Note
+import function
 
 
 def write_file(array, mode):
@@ -23,6 +24,10 @@ def read_file():
                 id = split_n[0], title = split_n[1], body = split_n[2], date = split_n[3])
             array.append(note)
     except Exception:
+        function.Clear_time_sleep.time_sleep()
+        function.Clear_time_sleep.clear()
         print('Нет сохраненных заметок...')
+        function.Clear_time_sleep.time_sleep()
+        function.Clear_time_sleep.clear()
     finally:
         return array
